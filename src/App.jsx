@@ -1,5 +1,24 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+
+// import ProfileForm from "./pages/ProfileForm/ProfileForm";
 function App() {
-  return <></>;
+  return (
+    <>
+    <BrowserRouter>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<h1>Home</h1>} />
+        <Route path="/menu" element={<h1>Menu</h1>} />
+        <Route path="/about" element={<h1>About</h1>} />
+        <Route path="/contact" element={<h1>Contact</h1>} />
+      </Routes>
+    </BrowserRouter>
+
+    {/* <ProfileForm /> */}
+    </>
+  );
 }
 
 export default App;
