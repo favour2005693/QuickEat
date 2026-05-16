@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 // PAGES 
 import Home from "./pages/Home/Home.jsx"
 import SignUp from "./pages/SignUpForm/SignUp"
+import Login from "./pages/LoginForm/LoginForm"
 
 function App() {
   return (
@@ -17,8 +18,10 @@ function App() {
         <Route path="/about" element={<h1>About</h1>} />
         <Route path="/contact" element={<h1>Contact</h1>} />
         <Route path="/signUp" element={<SignUp />} />
+        <Route path="/Login" element={<Login />} />
       </Routes>
     </BrowserRouter>
+  
     </>
   );
 }

@@ -145,7 +145,7 @@ const navigate = useNavigate();
             {/* User */}
           <button className="rounded-full hover:bg-gray-100" >
               {/* <User size={22} className="text-gray-700 dark:text-white" /> */}
-              <img class="w-12 cursor-pointer h-12 rounded-full object-cover " src={profileImage} alt="user Profile" />
+              <img className="w-12 cursor-pointer h-12 rounded-full object-cover " src={profileImage} alt="user Profile" />
             </button>
 
             {/* CTA Button */}

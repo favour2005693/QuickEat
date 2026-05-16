@@ -1,5 +1,11 @@
+import { useNavigate } from "react-router-dom"
 // Signup.jsx
 export default function Signup() {
+
+  const navigate = useNavigate();
+    const navigteToLogin = () =>{
+      navigate("/Login")
+    }
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8">
@@ -89,7 +95,7 @@ export default function Signup() {
           {/* Login Link */}
           <p className="text-center text-sm text-gray-600">
             Already have an account?{" "}
-            <span className="text-blue-600 hover:underline cursor-pointer">
+            <span className="text-blue-600 hover:underline cursor-pointer" onClick={navigteToLogin}>
               Login
             </span>
           </p>
