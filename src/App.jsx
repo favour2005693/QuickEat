@@ -1,7 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
-// import ProfileForm from "./pages/ProfileForm/ProfileForm";
+// PAGES 
+import Home from "./pages/Home/Home.jsx"
+import SignUp from "./pages/SignUpForm/SignUp"
+
 function App() {
   return (
     <>
@@ -9,14 +12,13 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<h1>Home</h1>} />
+        <Route path="/" element={<Home />} />
         <Route path="/menu" element={<h1>Menu</h1>} />
         <Route path="/about" element={<h1>About</h1>} />
         <Route path="/contact" element={<h1>Contact</h1>} />
+        <Route path="/signUp" element={<SignUp />} />
       </Routes>
     </BrowserRouter>
-
-    {/* <ProfileForm /> */}
     </>
   );
 }

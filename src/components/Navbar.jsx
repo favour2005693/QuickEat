@@ -1,5 +1,6 @@
 // Imports
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"
 import {
   Menu,
   X,
@@ -29,6 +30,10 @@ export default function Navbar() {
       document.documentElement.classList.remove("dark");
     }
   };
+const navigate = useNavigate();
+  const navigteToSignUp = () =>{
+    navigate("/signUp")
+  }
 
   return (
     <nav className="sticky top-0 z-50 bg-white dark:bg-white-600 shadow-md transition duration-300">
@@ -138,13 +143,13 @@ export default function Navbar() {
             </button>
 
             {/* User */}
-            <button className="rounded-full hover:bg-gray-100">
+          <button className="rounded-full hover:bg-gray-100" >
               {/* <User size={22} className="text-gray-700 dark:text-white" /> */}
               <img class="w-12 cursor-pointer h-12 rounded-full object-cover " src={profileImage} alt="user Profile" />
             </button>
 
             {/* CTA Button */}
-            <button className="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-full font-medium transition duration-300">
+            <button className="bg-red-500 hover:bg-red-600 text-white cursor-pointer px-5 py-2 rounded-full font-medium transition duration-300"  onClick={navigteToSignUp}>
              Sign Up
             </button>
           </div>
@@ -226,7 +231,7 @@ export default function Navbar() {
                 </span>
               </button>
 
-              <button className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+              <button className="p-2 rounded-full  ">
                 {/* <User size={22} className="text-gray-700 dark:text-black" /> */}
               <img class="w-12 cursor-pointer h-12 rounded-full object-cover " src={profileImage} alt="user Profile" />
 
@@ -234,7 +239,7 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Button */}
-            <button className="bg-red-500 hover:bg-orange-600 text-white py-2 rounded-full font-medium transition duration-300">
+            <button className="bg-red-500 hover:bg-red-300 text-white py-2 rounded-full font-medium transition duration-300"  onClick={navigteToSignUp}>
               Sign Up
             </button>
           </div>
