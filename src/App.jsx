@@ -6,6 +6,7 @@ import Home from "./pages/Home/Home.jsx"
 import SignUp from "./pages/SignUpForm/SignUp"
 import Login from "./pages/LoginForm/LoginForm"
 
+
 function App() {
   return (
     <>
@@ -21,7 +22,6 @@ function App() {
         <Route path="/Login" element={<Login />} />
       </Routes>
     </BrowserRouter>
-  
     </>
   );
 }
