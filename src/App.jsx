@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import HeroSlider from "./components/HeroSlider.jsx";
 
 // PAGES 
 import Home from "./pages/Home/Home.jsx"
@@ -21,6 +23,8 @@ function App() {
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/Login" element={<Login />} />
       </Routes>
+      <HeroSlider />
+      <Footer />
     </BrowserRouter>
     </>
   );

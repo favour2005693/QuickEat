@@ -95,7 +95,7 @@ export default function Signup() {
           {/* Login Link */}
           <p className="text-center text-sm text-gray-600">
             Already have an account?{" "}
-            <span className="text-blue-600 hover:underline cursor-pointer" onClick={navigteToLogin}>
+           <span className="text-black font-semibold cursor-pointer hover:underline"  onClick={navigteToLogin}>
               Login
             </span>
           </p>
@@ -104,3 +104,4 @@ export default function Signup() {
     </div>
   );
 }
+
