@@ -1,5 +1,8 @@
 // HeroSlider.jsx
-
+// IMPORT SLIDE IMAGES  
+import slideImage1 from '../assets/images/d5e18022e63641a90ddad2d056cdf252.jpg';
+import slideImage2 from '../assets/images/e4453bf0971059dc5bbeca37665bd78d.jpg';
+import slideImage3 from '../assets/images/f5071c267a9ab9b95cc5e5cd0e174fc8.jpg';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 
@@ -9,24 +12,23 @@ import "swiper/css/pagination";
 const slides = [
   {
     id: 1,
-    image:
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836",
+    image: slideImage1,
   },
   {
     id: 2,
     image:
-      "https://images.unsplash.com/photo-1490645935967-10de6ba17061",
+     slideImage2,
   },
   {
     id: 3,
     image:
-      "https://images.unsplash.com/photo-1512621776951-a57141f2eefd",
+     slideImage3,
   },
 ];
 
 export default function HeroSlider() {
   return (
-    <div className="w-[450px] ">
+    <div className="w-[450px]  ">
       <Swiper
         modules={[Pagination, Autoplay]}
         pagination={{ clickable: true }}
@@ -41,11 +43,11 @@ export default function HeroSlider() {
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <div className="w-full h-[250px] md:h-[500px]">
+            <div className="w-full h-[250px] md:h-[300px]">
               <img
                 src={slide.image}
                 alt="Food"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover "
               />
             </div>
           </SwiperSlide>
