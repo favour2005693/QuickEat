@@ -12,7 +12,7 @@ export default function Footer() {
        {/* Brand  */}
       <div className="lg:col-span-2">
         <div className="flex items-center gap-3 mb-5">
-          {/* <div className="w-12 h-12 rounded-xl bg-orange-500 flex items-center justify-center text-2xl font-bold shadow-lg">
+          {/* <divclassName="w-12 h-12 rounded-xl bg-orange-500 flex items-center justify-center text-2xl font-bold shadow-lg">
             Q
           </div> */}
 
@@ -86,11 +86,11 @@ export default function Footer() {
           <input
             type="email"
             placeholder="Enter your email"
-            className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/10 outline-none focus:border-orange-500 text-white placeholder:text-gray-400"
+           className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/10 outline-none focus:border-red-500 text-white placeholder:text-gray-400"
           />
 
           <button
-            classNameName="w-full bg-orange-500 hover:bg-orange-600 py-3 rounded-xl font-semibold transition duration-300"
+           classNameName="w-full bg-orange-500 hover:bg-orange-600 py-3 rounded-xl font-semibold transition duration-300"
           >
             Subscribe
           </button>
@@ -108,19 +108,19 @@ export default function Footer() {
 
       {/* <!-- Social Icons --> */}
       <div className="flex items-center gap-4">
-        <a href="#" className="w-11 h-11 rounded-full bg-white/10 hover:bg-orange-500 flex items-center justify-center transition duration-300">
-          <i className="fa-brands fa-facebook-f"></i>
+        <a href="#"className="w-11 h-11 rounded-full bg-white/10 hover:bg-orange-500 flex items-center justify-center transition duration-300">
+          < i className="fa-brands fa-facebook-f"></i>
         </a>
 
-        <a href="#" className="w-11 h-11 rounded-full bg-white/10 hover:bg-orange-500 flex items-center justify-center transition duration-300">
+        <a href="#"className="w-11 h-11 rounded-full bg-white/10 hover:bg-orange-500 flex items-center justify-center transition duration-300">
           <i className="fa-brands fa-instagram"></i>
         </a>
 
-        <a href="#" className="w-11 h-11 rounded-full bg-white/10 hover:bg-orange-500 flex items-center justify-center transition duration-300">
+        <a href="#"className="w-11 h-11 rounded-full bg-white/10 hover:bg-orange-500 flex items-center justify-center transition duration-300">
           <i className="fa-brands fa-x-twitter"></i>
         </a>
 
-        <a href="#" className="w-11 h-11 rounded-full bg-white/10 hover:bg-orange-500 flex items-center justify-center transition duration-300">
+        <a href="#"className="w-11 h-11 rounded-full bg-white/10 hover:bg-orange-500 flex items-center justify-center transition duration-300">
           <i className="fa-brands fa-linkedin-in"></i>
         </a>
       </div>

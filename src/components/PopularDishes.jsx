@@ -1,0 +1,66 @@
+import React from "react";
+import { FaStar } from "react-icons/fa";
+import { FiPlus } from "react-icons/fi";
+import { FaTruck } from "react-icons/fa";
+
+// IMPORT IMAGES 
+import PepperoniPizza from "../assets/images/3ec9fe32c6217014789b5f42e2343f47.jpg"
+
+export default function PopularDishes() {
+  return (
+    <div className="">
+      <h2 className="font-bold text-2xl px-8">Popular Dishes</h2>
+      <div className="m-4">
+       <div className="max-w-sm overflow-hidden bg-white border border-gray-100 shadow-lg rounded-2xl hover:shadow-xl transition-all duration-300 group">
+      {/* Food Image */}
+      <div className="overflow-hidden">
+        <img
+          src={PepperoniPizza}
+          alt="Pepperoni Pizza"
+          className="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500"
+        />
+      </div>
+
+      {/* Content */}
+      <div className="p-4">
+        {/* Category */}
+        <span className="text-sm font-medium text-red-500">
+          Pizza
+        </span>
+
+        {/* Title */}
+        <h3 className="mt-1 text-xl font-bold text-gray-800">
+          Pepperoni Pizza
+        </h3>
+
+        {/* Rating & Delivery */}
+        <div className="flex items-center justify-between mt-3">
+          <div className="flex items-center gap-1">
+            <FaStar className="text-yellow-400" />
+            <span className="font-semibold">4.8</span>
+            <span className="text-gray-500 text-sm">(120)</span>
+          </div>
+
+          <div className="flex items-center gap-1 text-gray-600">
+            <FaTruck />
+            <span className="text-sm">20-30 min</span>
+          </div>
+        </div>
+
+        {/* Price & Button */}
+        <div className="flex items-center justify-between mt-5">
+          <h4 className="text-2xl font-bold text-red-500">
+            ₦5,500
+          </h4>
+
+          <button className="flex items-center gap-1 px-4 py-2 text-white bg-red-500 rounded-xl hover:bg-red-600 transition">
+            <FiPlus />
+            Add
+          </button>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+  );
+}
