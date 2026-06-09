@@ -23,7 +23,7 @@ function CategoriesSlider() {
           <h2 className=" font-bold text-2xl">Popular Categories</h2>
         </div>
         <div className="flex items-center">
-          <span>View more</span>
+          <span>see more</span>
           {/* <FaArrowRight size={20} /> */}
         </div>
       </div>
@@ -46,7 +46,7 @@ function CategoriesSlider() {
       >
         {categories.map((item) => (
           <SwiperSlide key={item.name}>
-            <div className="flex flex-col items-center border-1 border-red-500 justify-center p-4 bg-white rounded-xl shadow-md">
+            <div className="flex flex-col items-center border border-red-500 justify-center p-4 bg-white rounded-xl shadow-md">
               <span className="text-4xl mb-2">{item.icon}</span>
               <p>{item.name}</p>
             </div>

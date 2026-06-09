@@ -1,7 +1,7 @@
 // IMPORT SLIDE IMAGES  
-import slideImage1 from '../assets/images/d5e18022e63641a90ddad2d056cdf252.jpg';
-import slideImage2 from '../assets/images/e4453bf0971059dc5bbeca37665bd78d.jpg';
-import slideImage3 from '../assets/images/f5071c267a9ab9b95cc5e5cd0e174fc8.jpg';
+import slideImage1 from '../../assets/images/d5e18022e63641a90ddad2d056cdf252.jpg';
+import slideImage2 from '../../assets/images/e4453bf0971059dc5bbeca37665bd78d.jpg';
+import slideImage3 from '../../assets/images/f5071c267a9ab9b95cc5e5cd0e174fc8.jpg';
 // IMPORT CSS FROM SWIPER DEPENDENCIES 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";

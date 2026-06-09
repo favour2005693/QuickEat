@@ -1,6 +1,11 @@
-// Imports
 import { useState } from "react";
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import logo from "../../assets/images/logo.png";
+import profileImage from "../../assets/images/profile.jpg";
+import { useTheme } from "../../contexts/ThemeContext";
+
+// import icons from lucide-react
 import {
   Menu,
   X,
@@ -11,30 +16,18 @@ import {
   Sun,
   ChevronDown,
 } from "lucide-react";
-import { Link } from "react-router-dom";
-import logo from "../assets/images/logo.png";
-import profileImage from "../assets/images/profile.jpg"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  // const [darkMode, setDarkMode] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-
   // Toggle Dark Mode
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
+  const { theme, toggleTheme } = useTheme();
 
-    if (!darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+  const navigate = useNavigate();
+  const navigteToSignUp = () => {
+    navigate("/signUp");
   };
-const navigate = useNavigate();
-  const navigteToSignUp = () =>{
-    navigate("/signUp")
-  }
-
   return (
     <nav className="sticky top-0 z-50 bg-white dark:bg-white-600 shadow-md transition duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -42,34 +35,34 @@ const navigate = useNavigate();
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <img src={logo}  className="w-40 "alt="logo" />
+            <img src={logo} className="w-40 " alt="logo" />
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <Link
               to="/"
-              className="text-black-700  hover:text-orange-500 transition duration-300"
+              className="text-black-700  hover:text-red-500 transition duration-300"
             >
               Home
             </Link>
 
             <Link
               to="/menu"
-              className="text-black-700 hover:text-orange-500 transition duration-300"
+              className="text-black-700 hover:text-red-500 transition duration-300"
             >
               Menu
             </Link>
             <Link
               to="/about"
-              className="text-black-700 hover:text-orange-500 transition duration-300"
+              className="text-black-700 hover:text-red-500 transition duration-300"
             >
               About
             </Link>
 
             <Link
               to="/contact"
-              className="text-black-700  hover:text-orange-500 transition duration-300"
+              className="text-black-700  hover:text-red-500 transition duration-300"
             >
               Contact
             </Link>
@@ -78,7 +71,7 @@ const navigate = useNavigate();
             <div className="relative">
               <button
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="flex items-center gap-1 text-black-700 hover:text-orange-500 transition"
+                className="flex items-center gap-1 text-black-700 hover:text-red-500 transition"
               >
                 Pages
                 <ChevronDown size={18} />
@@ -115,15 +108,15 @@ const navigate = useNavigate();
           <div className="hidden md:flex items-center gap-4">
             {/* Search */}
             <button className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition">
-              <Search size={20} className="text-gray-700 dark:text-white" />
+              <Search size={20} className="text-black-700 " />
             </button>
 
             {/* Dark Mode */}
             <button
-              onClick={toggleDarkMode}
+              onClick={toggleTheme}
               className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition"
             >
-              {darkMode ? (
+              {theme ? (
                 <Sun size={20} className="text-yellow-400" />
               ) : (
                 <Moon size={20} className="text-gray-700" />
@@ -143,14 +136,21 @@ const navigate = useNavigate();
             </button>
 
             {/* User */}
-          <button className="rounded-full hover:bg-gray-100" >
+            <button className="rounded-full hover:bg-gray-100">
               {/* <User size={22} className="text-gray-700 dark:text-white" /> */}
-              <img className="w-12 cursor-pointer h-12 rounded-full object-cover " src={profileImage} alt="user Profile" />
+              <img
+                className="w-12 cursor-pointer h-12 rounded-full object-cover "
+                src={profileImage}
+                alt="user Profile"
+              />
             </button>
 
             {/* CTA Button */}
-            <button className="bg-red-500 hover:bg-red-600 text-white cursor-pointer px-5 py-2 rounded-full font-medium transition duration-300"  onClick={navigteToSignUp}>
-             Sign Up
+            <button
+              className="bg-red-500 hover:bg-red-600 text-white cursor-pointer px-5 py-2 rounded-full font-medium transition duration-300"
+              onClick={navigteToSignUp}
+            >
+              Sign Up
             </button>
           </div>
 
@@ -170,35 +170,35 @@ const navigate = useNavigate();
           <div className="flex flex-col gap-4 px-6 py-5">
             <Link
               to="/"
-              className="text-gray-700 dark:text-black hover:text-orange-500"
+              className="text-gray-700 dark:text-black hover:text-red-500"
             >
               Home
             </Link>
 
             <Link
               to="/menu"
-              className="text-gray-700 dark:text-black hover:text-orange-500"
+              className="text-gray-700 dark:text-black hover:text-red-500"
             >
               Menu
             </Link>
 
             <Link
               to="/about"
-              className="text-gray-700 dark:text-black hover:text-orange-500"
+              className="text-gray-700 dark:text-black hover:text-red-500"
             >
               About
             </Link>
 
             <Link
               to="/contact"
-              className="text-gray-700 dark:text-black hover:text-orange-500"
+              className="text-gray-700 dark:text-black hover:text-red-500"
             >
               Contact
             </Link>
 
             <Link
               to="/offers"
-              className="text-gray-700 dark:text-black hover:text-orange-500"
+              className="text-gray-700 dark:text-black hover:text-red-500"
             >
               Offers
             </Link>
@@ -210,10 +210,10 @@ const navigate = useNavigate();
               </button>
 
               <button
-                onClick={toggleDarkMode}
+                onClick={toggleTheme}
                 className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
               >
-                {darkMode ? (
+                {theme ? (
                   <Sun size={20} className="text-yellow-400" />
                 ) : (
                   <Moon size={20} className="text-gray-700 dark:text-black" />
@@ -233,13 +233,19 @@ const navigate = useNavigate();
 
               <button className="p-2 rounded-full  ">
                 {/* <User size={22} className="text-gray-700 dark:text-black" /> */}
-              <img class="w-12 cursor-pointer h-12 rounded-full object-cover " src={profileImage} alt="user Profile" />
-
+                <img
+                  class="w-12 cursor-pointer h-12 rounded-full object-cover "
+                  src={profileImage}
+                  alt="user Profile"
+                />
               </button>
             </div>
 
             {/* Mobile Button */}
-            <button className="bg-red-500 hover:bg-red-300 text-white py-2 rounded-full font-medium transition duration-300"  onClick={navigteToSignUp}>
+            <button
+              className="bg-red-500 hover:bg-red-300 text-white py-2 rounded-full font-medium transition duration-300"
+              onClick={navigteToSignUp}
+            >
               Sign Up
             </button>
           </div>
