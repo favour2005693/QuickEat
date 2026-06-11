@@ -3,7 +3,7 @@ import { BadgePercent } from "lucide-react"
 
 const PromoBanner = () => {
   return (
-    <div className="bg-white border border-gray-200 p-5 m-5 rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-4 shadow-sm">
+    <div className="bg-white border border-gray-200  m-5 rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-4 shadow-sm">
       {/* Left Side */}
       <div className="flex items-center gap-4">
         <div className="w-14 h-14 flex items-center justify-center bg-gray-100 rounded-lg">

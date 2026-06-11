@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import ErrorModal from "../../components/layout/ErrorModal";
+
 // import axios api file
 import { getMeals } from "../../api/MealApi";
 // importing icon
@@ -9,22 +11,26 @@ import { FaTruck } from "react-icons/fa";
 export default function PopularDishes() {
   const [meal, setMeal] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     const fetchMeals = async () => {
       try {
         const data = await getMeals();
         setMeal(data);
-        console.log(data)
+        console.log(data);
       } catch (error) {
-        setError(error.message);
+        setError("Failed To fetch Meal");
       } finally {
         setLoading(false);
       }
     };
     fetchMeals();
   }, []);
+
+  const HandleCloseModal = () => {
+    setError("");
+  };
   return (
     <section className="">
       <div className="flex items-center justify-between px-8 mb-5">
@@ -77,7 +83,9 @@ export default function PopularDishes() {
 
               {/* Price & Button */}
               <div className="flex items-center justify-between mt-5">
-                <h4 className="text-2xl font-bold text-red-500">₦{productMeal.price}</h4>
+                <h4 className="text-2xl font-bold text-red-500">
+                  ₦{productMeal.price}
+                </h4>
 
                 <button className="flex items-center gap-1 px-4 py-2 text-white bg-red-500 rounded-xl hover:bg-red-600 transition">
                   <FiPlus />
@@ -88,11 +96,7 @@ export default function PopularDishes() {
           </div>
         ))}
       </div>
-      {error && (
-        <div className="bg-red-100 text-red-700 text-center p-3 rounded-md mb-4">
-          {error}
-        </div>
-      )}
+      {error && <ErrorModal message={error} onClose={HandleCloseModal} />}
     </section>
   );
 }
