@@ -28,7 +28,7 @@ const slides = [
 
 export default function HeroSlider() {
   return (
-    <div className="w-[450px] ">
+    <div className="w-[450px]">
       <Swiper
         modules={[Pagination, Autoplay]}
         pagination={{ clickable: true }}

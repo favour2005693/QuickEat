@@ -1,4 +1,12 @@
 import React from "react";
+import {
+ FaFacebookF,
+ FaInstagram,
+ FaTwitter,
+ FaGooglePlay,
+ FaApple,
+
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -31,7 +39,7 @@ export default function Footer() {
             {/* <!-- App Buttons --> */}
             <div className="flex flex-wrap gap-4">
               <button className="bg-white text-black px-5 py-3 rounded-xl flex items-center gap-3 hover:scale-105 transition duration-300">
-                <i className="fa-brands fa-apple text-2xl"></i>
+                <FaApple size={20} />
                 <div className="text-left">
                   <p className="text-xs">Download on the</p>
                   <h4 className="font-semibold text-sm">App Store</h4>
@@ -39,7 +47,7 @@ export default function Footer() {
               </button>
 
               <button className="bg-white text-black px-5 py-3 rounded-xl flex items-center gap-3 hover:scale-105 transition duration-300">
-                <i className="fa-brands fa-google-play text-xl text-green-600"></i>
+                <FaGooglePlay size={20} color="red" />
                 <div className="text-left">
                   <p className="text-xs">Get it on</p>
                   <h4 className="font-semibold text-sm">Google Play</h4>
@@ -139,21 +147,21 @@ export default function Footer() {
               href="#"
               className="w-11 h-11 rounded-full bg-white/10 hover:bg-red-500 flex items-center justify-center transition duration-300"
             >
-              <i className="fa-brands fa-facebook-f"></i>
+              <FaFacebookF />
             </a>
 
             <a
               href="#"
               className="w-11 h-11 rounded-full bg-white/10 hover:bg-red-500 flex items-center justify-center transition duration-300"
             >
-              <i className="fa-brands fa-instagram"></i>
+              <FaInstagram />
             </a>
 
             <a
               href="#"
               className="w-11 h-11 rounded-full bg-white/10 hover:bg-red-500 flex items-center justify-center transition duration-300"
             >
-              <i className="fa-brands fa-x-twitter"></i>
+              <FaTwitter />
             </a>
 
             <a

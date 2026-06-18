@@ -6,24 +6,24 @@ function HeroSection() {
   return (
     <section className="flex flex-wrap justify-around mt-10 mb-10">
       <div className="px-4">
-        <h1 className="font-bold text-5xl">
-          Delicious Foods, <br />
+        <h1 className="font-bold text-4xl">
+          Delicious Foods,   
           Deliverd Fast
         </h1>
-        <p className="text-2xl">
+        <p className="text-[20px] px-1">
           Order your favourite meals top resturant near you.
         </p>
 
-        <div className="flex mt-4 flex-wrap">
+        <div className="flex mt-4 flex-col flex-wrap gap-3">
           <input
             type="text"
             placeholder="Search..."
-            className="w-80 border border-red-300  rounded-bl-lg rounded-tl-lg  px-4 py-3 outline-non transition"
+            className="w-full border border-red-500 rounded-lg  px-4 py-3 focus:outline-none transition"
           />
           <button
-            className="bg-red-500  border-red-300  hover:bg-red-600 border border-gray-300 text-white cursor-pointer px-5 py-3 rounded-tr-lg 
-            rounded-br-lg 
-             font-medium transition duration-300"
+            className="bg-red-500   hover:bg-red-600 border border-gray-300 text-white cursor-pointer px-5 py-3 rounded-tr-lg 
+            rounded-lg 
+             font-medium transition duration-300  sm:w-full"
           >
             Search
           </button>

@@ -33,6 +33,6 @@
 import api from "./axios";
 
 export const getMeals = async () => {
-  const response = await api.get("/products");
-  return response.data.products;
+  const response = await api.get("/search.php?s=burger");
+  return response.data.meals;
 };

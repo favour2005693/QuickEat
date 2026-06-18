@@ -20,7 +20,7 @@ export default function PopularDishes() {
         setMeal(data);
         console.log(data);
       } catch (error) {
-        setError("Failed To fetch Meal");
+        // setError("Failed To fetch Meal");
       } finally {
         setLoading(false);
       }
@@ -44,13 +44,13 @@ export default function PopularDishes() {
         {meal.map((productMeal) => (
           <div
             className="max-w-sm overflow-hidden bg-white border border-gray-100 shadow-lg rounded-2xl hover:shadow-xl transition-all duration-300 group"
-            key={productMeal.id}
+            key={productMeal.idMeal}
           >
             {/* Food Image */}
             <div className="overflow-hidden">
               <img
-                src={productMeal.images}
-                alt={productMeal.title}
+                src={productMeal.strMealThumb}
+                alt={productMeal.strMeal}
                 className="w-full h-52 object-cover group-hover:scale-110 transition-transform duration-500"
               />
             </div>
@@ -59,12 +59,12 @@ export default function PopularDishes() {
             <div className="p-4">
               {/* Category */}
               <span className="text-sm font-medium text-red-500">
-                {productMeal.category}
+                {productMeal.strMeal}
               </span>
 
               {/* Title */}
               <h3 className="mt-1 text-xl font-bold text-gray-800">
-                {productMeal.title}
+                {productMeal.strMeal}
               </h3>
 
               {/* Rating & Delivery */}
@@ -96,7 +96,7 @@ export default function PopularDishes() {
           </div>
         ))}
       </div>
-      {error && <ErrorModal message={error} onClose={HandleCloseModal} />}
+      {/* {error && <ErrorModal message={error} onClose={HandleCloseModal} />} */}
     </section>
   );
 }
