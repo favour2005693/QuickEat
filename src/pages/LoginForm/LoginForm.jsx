@@ -14,7 +14,7 @@ const LoginForm = () => {
       <div className="bg-white shadow-2xl rounded-2xl w-full max-w-md p-8">
         {/* Logo */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-red-600">QuickEat</h1>
+          <h1 className="text-3xl font-bold text-black-600">QuickEat</h1>
           <p className="text-gray-500 mt-2">Welcome back</p>
         </div>
 
@@ -29,7 +29,7 @@ const LoginForm = () => {
             <input
               type="email"
               placeholder="Enter your email"
-              className="w-full border border-gray-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-black transition"
+              className="w-full border border-gray-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-red transition"
             />
           </div>
 
@@ -43,7 +43,7 @@ const LoginForm = () => {
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="Enter your password"
-                className="w-full border border-gray-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-black transition"
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-red transition"
               />
 
               <button

@@ -1,11 +1,10 @@
 import React from "react";
 import {
- FaFacebookF,
- FaInstagram,
- FaTwitter,
- FaGooglePlay,
- FaApple,
-
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaGooglePlay,
+  FaApple,
 } from "react-icons/fa";
 
 export default function Footer() {
@@ -23,7 +22,7 @@ export default function Footer() {
           </div> */}
 
               <div>
-                <h2 className="text-2xl text-red-600 font-bold">QuickEat</h2>
+                <h2 className="text-2xl text-black-600 font-bold">QuickEat</h2>
                 <p className="text-gray-400 text-sm">
                   Fast delivery, fresh meals, anytime.
                 </p>
@@ -62,22 +61,22 @@ export default function Footer() {
 
             <ul className="space-y-3 text-gray-400">
               <li>
-                <a href="#" className="hover:text-red-400 transition">
+                <a href="#" className="hover:text-black-400 transition">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-red-400 transition">
+                <a href="#" className="hover:text-black-400 transition">
                   Careers
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-red-400 transition">
+                <a href="#" className="hover:text-black-400 transition">
                   Blog
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-red-400 transition">
+                <a href="#" className="hover:text-black-400 transition">
                   Press
                 </a>
               </li>
@@ -90,22 +89,22 @@ export default function Footer() {
 
             <ul className="space-y-3 text-gray-400">
               <li>
-                <a href="#" className="hover:text-red-400 transition">
+                <a href="#" className="hover:text-black-400 transition">
                   Help Center
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-red-400 transition">
+                <a href="#" className="hover:text-black-400 transition">
                   Safety
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-red-400 transition">
+                <a href="#" className="hover:text-black-400 transition">
                   Terms of Service
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-red-400 transition">
+                <a href="#" className="hover:text-black-400 transition">
                   Privacy Policy
                 </a>
               </li>

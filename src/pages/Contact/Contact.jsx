@@ -8,14 +8,14 @@ import {
  FaPhoneAlt,
 } from "react-icons/fa";
 
-import bgImage from "../../assets/images/24ffcfb1e082b236f6898007351d7f76.jpg"
+import bgImage from "../../assets/images/24ffcfb1e082b236f6898007351d7f76.jpg";
 
 const Contact = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section
-        className=" relative
+        className="relative
       bg-center bg-cover text-white py-20"
         style={{ backgroundImage: `url(${bgImage})` }}
       >
@@ -36,7 +36,7 @@ const Contact = () => {
       <section className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid md:grid-cols-3 gap-6">
           <div className="bg-white p-6 rounded-2xl shadow-sm text-center">
-            <FaPhoneAlt size={40} className="mx-auto text-red-500 mb-4" />
+            <FaPhoneAlt size={40} className="mx-auto text-black-500 mb-4" />
 
             <h3 className="font-semibold text-xl mb-2">Phone</h3>
 
@@ -44,7 +44,7 @@ const Contact = () => {
           </div>
 
           <div className="bg-white p-6 rounded-2xl shadow-sm text-center">
-            <FaEnvelope size={40} className="mx-auto text-red-500 mb-4" />
+            <FaEnvelope size={40} className="mx-auto text-black-500 mb-4" />
 
             <h3 className="font-semibold text-xl mb-2">Email</h3>
 
@@ -52,7 +52,7 @@ const Contact = () => {
           </div>
 
           <div className="bg-white p-6 rounded-2xl shadow-sm text-center">
-            <FaMapMarkerAlt size={40} className="mx-auto text-red-500 mb-4" />
+            <FaMapMarkerAlt size={40} className="mx-auto text-black-500 mb-4" />
 
             <h3 className="font-semibold text-xl mb-2">Address</h3>
 
@@ -119,7 +119,7 @@ const Contact = () => {
           <div className="space-y-6">
             <div className="bg-white p-8 rounded-2xl shadow-sm">
               <div className="flex items-center gap-3 mb-5">
-                <FaClock className="text-red-500" />
+                <FaClock className="text-black-500" />
 
                 <h2 className="text-2xl font-bold">Opening Hours</h2>
               </div>

@@ -70,7 +70,7 @@ const About = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white p-6 rounded-xl shadow">
-              <FaShippingFast className="text-red-500 text-4xl mb-4" />
+              <FaShippingFast className="text-black-500 text-4xl mb-4" />
               <h3 className="font-semibold text-xl mb-2">Fast Delivery</h3>
               <p className="text-gray-600">
                 Get your meals delivered quickly and safely.
@@ -78,7 +78,7 @@ const About = () => {
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow">
-              <FaUtensils className="text-red-500 text-4xl mb-4" />
+              <FaUtensils className="text-black-500 text-4xl mb-4" />
               <h3 className="font-semibold text-xl mb-2">Quality Food</h3>
               <p className="text-gray-600">
                 Fresh and delicious meals from trusted restaurants.
@@ -86,7 +86,7 @@ const About = () => {
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow">
-              <FaSmile className="text-red-500 text-4xl mb-4" />
+              <FaSmile className="text-black-500 text-4xl mb-4" />
               <h3 className="font-semibold text-xl mb-2">Happy Customers</h3>
               <p className="text-gray-600">
                 Thousands of satisfied customers trust QuickEat.
@@ -94,7 +94,7 @@ const About = () => {
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow">
-              <FaUsers className="text-red-500 text-4xl mb-4" />
+              <FaUsers className="text-black-500 text-4xl mb-4" />
               <h3 className="font-semibold text-xl mb-2">Great Support</h3>
               <p className="text-gray-600">
                 Our support team is available whenever you need help.
@@ -109,22 +109,22 @@ const About = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <h3 className="text-4xl font-bold text-red-500">50K+</h3>
+              <h3 className="text-4xl font-bold text-black-500">50K+</h3>
               <p className="text-gray-600 mt-2">Orders Delivered</p>
             </div>
 
             <div>
-              <h3 className="text-4xl font-bold text-red-500">100+</h3>
+              <h3 className="text-4xl font-bold text-black-500">100+</h3>
               <p className="text-gray-600 mt-2">Restaurant Partners</p>
             </div>
 
             <div>
-              <h3 className="text-4xl font-bold text-red-500">25K+</h3>
+              <h3 className="text-4xl font-bold text-black-500">25K+</h3>
               <p className="text-gray-600 mt-2">Happy Customers</p>
             </div>
 
             <div>
-              <h3 className="text-4xl font-bold text-red-500">24/7</h3>
+              <h3 className="text-4xl font-bold text-black-500">24/7</h3>
               <p className="text-gray-600 mt-2">Customer Support</p>
             </div>
           </div>

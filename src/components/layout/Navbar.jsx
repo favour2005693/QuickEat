@@ -42,27 +42,27 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-8">
             <Link
               to="/"
-              className="text-black-700  hover:text-red-500 transition duration-300"
+              className="text-black-700  hover:text-black-500 transition duration-300"
             >
               Home
             </Link>
 
             <Link
               to="/menu"
-              className="text-black-700 hover:text-red-500 transition duration-300"
+              className="text-black-700 hover:text-black-500 transition duration-300"
             >
               Menu
             </Link>
             <Link
               to="/about"
-              className="text-black-700 hover:text-red-500 transition duration-300"
+              className="text-black-700 hover:text-black-500 transition duration-300"
             >
               About
             </Link>
 
             <Link
               to="/contact"
-              className="text-black-700  hover:text-red-500 transition duration-300"
+              className="text-black-700  hover:text-black-500 transition duration-300"
             >
               Contact
             </Link>
@@ -71,7 +71,7 @@ export default function Navbar() {
             <div className="relative">
               <button
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="flex items-center gap-1 text-black-700 hover:text-red-500 transition"
+                className="flex items-center gap-1 text-black-700 hover:text-black-500 transition"
               >
                 Pages
                 <ChevronDown size={18} />
@@ -81,21 +81,21 @@ export default function Navbar() {
                 <div className="absolute top-12 left-0 w-44 bg-white dark:bg-white-700 shadow-lg rounded-xl p-3 flex flex-col gap-3">
                   <Link
                     to="/offers"
-                    className="hover:text-red-500 dark:text-black"
+                    className="hover:text-black-500 dark:text-black"
                   >
                     Offers
                   </Link>
 
                   <Link
                     to="/orders"
-                    className="hover:text-red-500 dark:text-black"
+                    className="hover:text-black-500 dark:text-black"
                   >
                     Orders
                   </Link>
 
                   <Link
                     to="/profile"
-                    className="hover:text-red-500 dark:text-black"
+                    className="hover:text-black-500 dark:text-black"
                   >
                     Profile
                   </Link>
@@ -170,35 +170,35 @@ export default function Navbar() {
           <div className="flex flex-col gap-4 px-6 py-5">
             <Link
               to="/"
-              className="text-gray-700 dark:text-black hover:text-red-500"
+              className="text-gray-700 dark:text-black hover:text-black-500"
             >
               Home
             </Link>
 
             <Link
               to="/menu"
-              className="text-gray-700 dark:text-black hover:text-red-500"
+              className="text-gray-700 dark:text-black hover:text-black-500"
             >
               Menu
             </Link>
 
             <Link
               to="/about"
-              className="text-gray-700 dark:text-black hover:text-red-500"
+              className="text-gray-700 dark:text-black hover:text-black-500"
             >
               About
             </Link>
 
             <Link
               to="/contact"
-              className="text-gray-700 dark:text-black hover:text-red-500"
+              className="text-gray-700 dark:text-black hover:text-black-500"
             >
               Contact
             </Link>
 
             <Link
               to="/offers"
-              className="text-gray-700 dark:text-black hover:text-red-500"
+              className="text-gray-700 dark:text-black hover:text-black-500"
             >
               Offers
             </Link>

@@ -17,7 +17,7 @@ export default function PopularDishes() {
     const fetchMeals = async () => {
       try {
         const data = await getMeals();
-        setMeal(data);
+        // setMeal(data);
         console.log(data);
       } catch (error) {
         // setError("Failed To fetch Meal");
@@ -58,7 +58,7 @@ export default function PopularDishes() {
             {/* Content */}
             <div className="p-4">
               {/* Category */}
-              <span className="text-sm font-medium text-red-500">
+              <span className="text-sm font-medium text-black-500">
                 {productMeal.strMeal}
               </span>
 
@@ -83,8 +83,8 @@ export default function PopularDishes() {
 
               {/* Price & Button */}
               <div className="flex items-center justify-between mt-5">
-                <h4 className="text-2xl font-bold text-red-500">
-                  ₦{productMeal.price}
+                <h4 className="text-2xl font-bold text-black-500">
+                  ₦<span>5,000</span>
                 </h4>
 
                 <button className="flex items-center gap-1 px-4 py-2 text-white bg-red-500 rounded-xl hover:bg-red-600 transition">
