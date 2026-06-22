@@ -18,16 +18,20 @@ import {
 } from "lucide-react";
 
 export default function Navbar() {
+  const navigate = useNavigate();
+
   const [isOpen, setIsOpen] = useState(false);
   // const [darkMode, setDarkMode] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   // Toggle Dark Mode
   const { theme, toggleTheme } = useTheme();
 
-  const navigate = useNavigate();
+  
   const navigteToSignUp = () => {
     navigate("/signUp");
   };
+
+
   return (
     <nav className="sticky top-0 z-50 bg-white dark:bg-white-600 shadow-md transition duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,9 +111,9 @@ export default function Navbar() {
           {/* Right Side */}
           <div className="hidden md:flex items-center gap-4">
             {/* Search */}
-            <button className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+            <Link to="/search" className="p-2 rounded-full  dark:hover:bg-gray-800 transition">
               <Search size={20} className="text-black-700 " />
-            </button>
+            </Link>
 
             {/* Dark Mode */}
             <button

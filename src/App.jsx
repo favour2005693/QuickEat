@@ -11,14 +11,16 @@ import Menu from "./pages/Menu/Menu.jsx";
 import About from "./pages/About/About"
 import Contact from "./pages/Contact/Contact"
 import Offers from "./pages/Offers/Offers.jsx";
-import OfflineModal from "./components/OfflineModal.jsx";
+import Search from "./pages/Search/Search.jsx";
+
+// import OfflineModal from "./components/OfflineModal.jsx";
 
 
 function App() {
   return (
     <>
       <BrowserRouter basename="">
-        <OfflineModal />
+        {/* <OfflineModal /> */}
 
         <Navbar />
         <Routes>
@@ -27,6 +29,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/offers" element={<Offers />} />
+          <Route path="/search" element={<Search />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/Login" element={<Login />} />
         </Routes>

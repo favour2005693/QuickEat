@@ -37,7 +37,7 @@ const { isOnline } = useOnlineStatus();
         {/* Button */}
         <button
           onClick={() => window.location.reload()}
-          className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-xl font-semibold transition"
+          className="w-full cursor-pointer bg-red-600 hover:bg-red-700 text-white py-3 rounded-xl font-semibold transition"
         >
           Try Again
         </button>
