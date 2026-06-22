@@ -1,3 +1,7 @@
+import { useState } from 'react'
+import QrCodeGenerator from '../../components/QrCodeGenerator'
+
+
 import {
   Search,
   Tag,
@@ -50,6 +54,9 @@ import bgImage from "../../assets/images/offerbackground.jpeg";
 
 
 export default function OffersPage() {
+const [openQrCodeModal, setOpenQrCodeModal] = useState(false);
+
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero */}
@@ -114,9 +121,12 @@ export default function OffersPage() {
             <p className="mt-2">Get 50% OFF on your first order.</p>
           </div>
 
-          <button className="mt-4 md:mt-0 bg-white text-black px-6 py-3 rounded-xl font-semibold">
+          <button className="mt-4 md:mt-0 bg-white cursor-pointer text-black px-6 py-3 rounded-xl font-semibold"
+          onClick={() =>setOpenQrCodeModal(true)}>
             Claim Offer
           </button>
+     
+          {openQrCodeModal &&(<QrCodeGenerator />)}
         </div>
       </section>
 

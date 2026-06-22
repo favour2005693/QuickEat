@@ -11,11 +11,15 @@ import Menu from "./pages/Menu/Menu.jsx";
 import About from "./pages/About/About"
 import Contact from "./pages/Contact/Contact"
 import Offers from "./pages/Offers/Offers.jsx";
+import OfflineModal from "./components/OfflineModal.jsx";
+
 
 function App() {
   return (
     <>
       <BrowserRouter basename="">
+        <OfflineModal />
+
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
