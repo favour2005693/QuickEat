@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from 'react'
 // Layouts
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
@@ -14,9 +15,24 @@ import Offers from "./pages/Offers/Offers.jsx";
 import Search from "./pages/Search/Search.jsx";
 
 import OfflineModal from "./components/OfflineModal.jsx";
+import Welcome from "./screen/WelcomeScreen.jsx";
 
 
 function App() {
+
+      const [ShowWelcome, setShowWelcome] = useState(true);
+
+      useEffect(() => {
+        const timer = setTimeout(() => {
+        setShowWelcome(false)
+       }, 5000);
+        return () => clearTimeout(timer)
+      }, [])
+      
+      if (ShowWelcome) {
+        return <Welcome />
+      }
+
   return (
     <>
       <BrowserRouter basename="">
