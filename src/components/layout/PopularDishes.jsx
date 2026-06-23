@@ -18,7 +18,7 @@ export default function PopularDishes() {
       try {
         const data = await getMeals();
         setMeal(data);
-        console.log(data);
+        // console.log(data);
       } catch (error) {
         setError("Failed To fetch Meal");
       } finally {
