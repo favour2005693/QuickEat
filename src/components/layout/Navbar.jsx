@@ -209,10 +209,9 @@ export default function Navbar() {
 
             {/* Mobile Icons */}
             <div className="flex items-center gap-4 pt-4 border-t border-gray-200 dark:border-gray-700">
-              <button className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+              <Link to="/search" className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
                 <Search size={20} className="text-black-700 dark:text-black" />
-              </button>
-
+              </Link>
               <button
                 onClick={toggleTheme}
                 className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
