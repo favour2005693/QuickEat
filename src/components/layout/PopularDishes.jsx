@@ -17,10 +17,10 @@ export default function PopularDishes() {
     const fetchMeals = async () => {
       try {
         const data = await getMeals();
-        // setMeal(data);
+        setMeal(data);
         console.log(data);
       } catch (error) {
-        // setError("Failed To fetch Meal");
+        setError("Failed To fetch Meal");
       } finally {
         setLoading(false);
       }
@@ -96,7 +96,7 @@ export default function PopularDishes() {
           </div>
         ))}
       </div>
-      {/* {error && <ErrorModal message={error} onClose={HandleCloseModal} />} */}
+     {error && <ErrorModal message={error} onClose={HandleCloseModal} />} 
     </section>
   );
 }
