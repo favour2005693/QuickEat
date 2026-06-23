@@ -23,6 +23,7 @@ function App() {
         <OfflineModal />
 
         <Navbar />
+        <Home />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
