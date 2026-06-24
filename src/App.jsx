@@ -14,7 +14,7 @@ import Contact from "./pages/Contact/Contact"
 import Offers from "./pages/Offers/Offers.jsx";
 import Search from "./pages/Search/Search.jsx";
 
-import OfflineModal from "./components/OfflineModal.jsx";
+// import OfflineModal from "./components/OfflineModal.jsx";
 import Welcome from "./screen/WelcomeScreen.jsx";
 
 
@@ -36,10 +36,9 @@ function App() {
   return (
     <>
       <BrowserRouter basename="">
-        <OfflineModal />
+        {/* <OfflineModal /> */}
 
         <Navbar />
-        <Home />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />

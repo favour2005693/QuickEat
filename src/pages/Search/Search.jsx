@@ -1,33 +1,31 @@
 import { useState, useEffect } from "react";
-// import { searchMeals } from "../services/mealService";
+import { searchMeals } from "../../api/MealApi.js";
 import { FiSearch, FiX } from "react-icons/fi";
 
-const searchSuggestions = [
-  "Pizza",
-  "Burger",
-  "Rice",
-  "Chicken",
-  "pasta",
-] 
+const searchSuggestions = ["Pizza", "Burger", "Rice", "Chicken", "pasta"];
 
 const Search = () => {
   const [query, setQuery] = useState("");
   const [meals, setMeals] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  
+
   useEffect(() => {
     const delay = setTimeout(() => {
       if (query.trim()) {
-        fetchMeals();
       } else {
         setMeals([]);
       }
     }, 500);
+    fetchMeals();
 
     return () => clearTimeout(delay);
   }, [query]);
 
   const fetchMeals = async () => {
+  
+
     setLoading(true);
 
     const results = await searchMeals(query);
@@ -40,9 +38,7 @@ const Search = () => {
     <div className="min-h-screen bg-gray-50 px-4 py-6">
       {/* Header */}
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold text-red-600 mb-6">
-          Search Meals
-        </h1>
+        <h1 className="text-3xl font-bold text-red-600 mb-6">Search Meals</h1>
 
         {/* Search Bar */}
         <div className="relative">
@@ -74,13 +70,13 @@ const Search = () => {
 
         {/* SearchSuggestions Buttons */}
         <div className="flex flex-wrap justify-center mt-5 gap-5">
-        {
-          searchSuggestions.map((searchSuggestionsButton) => (
-            <div key={searchSuggestionsButton} >
-              <button className="border-2 border-red-500 cursor-pointer p-2 px-9 rounded-lg">{searchSuggestionsButton}</button>
+          {searchSuggestions.map((searchSuggestionsButton) => (
+            <div key={searchSuggestionsButton}>
+              <button className="border-2 border-red-500 cursor-pointer p-2 px-9 rounded-lg">
+                {searchSuggestionsButton}
+              </button>
             </div>
-          ))
-        }
+          ))}
         </div>
         {/* Loading */}
         {loading && (
@@ -90,15 +86,11 @@ const Search = () => {
         )}
 
         {/* No Results */}
-        {!loading &&
-          query &&
-          meals.length === 0 && (
-            <div className="text-center mt-10">
-              <h2 className="font-semibold text-lg">
-                No meals found
-              </h2>
-            </div>
-          )}
+        {!loading && query && meals.length === 0 && (
+          <div className="text-center mt-10">
+            <h2 className="font-semibold text-lg">No meals found</h2>
+          </div>
+        )}
 
         {/* Results */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
@@ -114,13 +106,9 @@ const Search = () => {
               />
 
               <div className="p-4">
-                <h3 className="font-semibold">
-                  {meal.strMeal}
-                </h3>
+                <h3 className="font-semibold">{meal.strMeal}</h3>
 
-                <p className="text-sm text-gray-500 mt-1">
-                  {meal.strCategory}
-                </p>
+                <p className="text-sm text-gray-500 mt-1">{meal.strCategory}</p>
 
                 <button className="mt-4 bg-red-600 text-white px-4 py-2 rounded-lg w-full">
                   View Meal

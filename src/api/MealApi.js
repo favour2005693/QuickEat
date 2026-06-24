@@ -1,37 +1,19 @@
-// fetch("www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata")
-
-// const BASE_URL = "https://www.themealdb.com/api/json/v1/1";
-
-// export const getMeals = async () => {
-//   const response = await fetch(
-//     `${BASE_URL}/search.php?s=`
-//   );
-
-//   const data = await response.json();
-//   return data.meals;
-// };
-
-// export const searchMeals = async (query) => {
-//   const response = await fetch(
-//     `${BASE_URL}/search.php?s=${query}`
-//   );
-
-//   const data = await response.json();
-//   return data.meals;
-// };
-
-// export const getMealById = async (id) => {
-//   const response = await fetch(
-//     `${BASE_URL}/lookup.php?i=${id}`
-//   );
-
-//   const data = await response.json();
-//   return data.meals[0];
-// };
-
-// AXIOS API SETUP
 import api from "./axios";
+// const BASE_URL = "https://www.themealdb.com/api/json/v1/1";
+// MealDB API endpoint
+// Searching meals from mealDB api call endpoint
+export const searchMeals = async (query) => {
+  try {
+    const response = await api.get(`/search.php?s=${query}`);
+    //  const data = await response.data.meals;
+    return response?.data?.meals || [];
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+};
 
+// Fecthing meals from mealDB api endpiont for product display
 export const getMeals = async () => {
   const response = await api.get("/search.php?s=Rice");
   return response.data.meals;
