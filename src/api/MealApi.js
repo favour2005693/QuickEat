@@ -1,6 +1,8 @@
 import api from "./axios";
 // const BASE_URL = "https://www.themealdb.com/api/json/v1/1";
-// MealDB API endpoint
+
+// MealDB API endpoints
+
 // Searching meals from mealDB api call endpoint
 export const searchMeals = async (query) => {
   try {

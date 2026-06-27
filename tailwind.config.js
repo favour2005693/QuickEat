@@ -6,7 +6,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      annimation: {
+        'logo-pump': 'logo-pump 1.1s ease-in-out infinite', 
+        'streak': 'streak-in  1.1s ease-in-out infinite',
+      },
+      Keyframes: {}
+    },
   },
   plugins: [],
 }

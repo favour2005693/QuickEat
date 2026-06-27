@@ -30,6 +30,9 @@ export default function Navbar() {
   const navigteToSignUp = () => {
     navigate("/signUp");
   };
+   const navigteToProfilePage = () => {
+     navigate("/profile");
+   };
 
 
   return (
@@ -38,9 +41,9 @@ export default function Navbar() {
         {/* Navbar Container */}
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
+          
             <img src={logo} className="w-40 " alt="logo" />
-          </Link>
+          
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
@@ -146,6 +149,7 @@ export default function Navbar() {
                 className="w-12 cursor-pointer h-12 rounded-full object-cover "
                 src={profileImage}
                 alt="user Profile"
+                 onClick={navigteToProfilePage}
               />
             </button>
 
@@ -240,6 +244,7 @@ export default function Navbar() {
                   class="w-12 cursor-pointer h-12 rounded-full object-cover "
                   src={profileImage}
                   alt="user Profile"
+                  onClick={navigteToProfilePage}
                 />
               </button>
             </div>
