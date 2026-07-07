@@ -4,12 +4,15 @@ import "./index.css";
 import App from "./App.jsx";
 import { ThemeProvider } from "./contexts/ThemeContext.jsx";
 import { OnlineStatusProvider } from "./contexts/OnlineStatusContext.jsx";
+import { AuthContextProvider } from "./contexts/AuthContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ThemeProvider>
       <OnlineStatusProvider>
-        <App />
+        <AuthContextProvider>
+          <App />
+        </AuthContextProvider>
       </OnlineStatusProvider>
     </ThemeProvider>
   </StrictMode>,

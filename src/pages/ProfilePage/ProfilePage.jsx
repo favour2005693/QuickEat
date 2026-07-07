@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../hooks/UseAuth";
 import {
   FaUserEdit,
   FaHeart,
@@ -9,12 +10,11 @@ import {
   FaHistory,
 } from "react-icons/fa";
 import EditProfile from "./EdithProfile";
-// import burger from "../../assets/images/burger1.jpg"
 import profile from "../../assets/images/avatar-man.jpg"
 
 const ProfilePage = () => {
 const navigate = useNavigate();
-
+const user = useAuth()
   return (
     <div className="min-h-screen bg-gray-100 pb-24">
       {/* Header */}
@@ -30,9 +30,9 @@ const navigate = useNavigate();
 
       {/* User Info */}
       <div className="mt-20 text-center px-4">
-        <h2 className="text-2xl font-bold text-gray-800">Favour Emmanuel</h2>
+        <h2 className="text-2xl font-bold text-gray-800">{user?.displayName}</h2>
 
-        <p className="text-gray-500">favour@example.com</p>
+        <p className="text-gray-500">{user?.email}</p>
 
         <button
           className="mt-4 bg-red-600 text-white px-6 py-3 cursor-pointer rounded-full font-medium shadow-md"

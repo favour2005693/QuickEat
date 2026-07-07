@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 // Layouts
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
-
 // Pages
 import Home from './pages/Home/Home.jsx';
 import SignUp from './pages/SignUpForm/SignUp';
@@ -13,19 +12,14 @@ import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import Offers from './pages/Offers/Offers.jsx';
 import Search from './pages/Search/Search.jsx';
-<<<<<<< HEAD
-
-
-// import OfflineModal from "./components/OfflineModal.jsx";
-import Welcome from './screen/WelcomeScreen.jsx';
 import ProfilePage from './pages/ProfilePage/ProfilePage.jsx';
 import EditProfile from './pages/ProfilePage/EdithProfile.jsx';
-// import EditProfile from './pages/ProfilePage/EdithProfile.jsx';
-=======
-
-// import OfflineModal from "./components/OfflineModal.jsx";
+// component
+import OfflineModal from "./components/OfflineModal.jsx";
 import Welcome from './screen/WelcomeScreen.jsx';
->>>>>>> b00121f9cc69d48919edc5d67d87d3ee729211ae
+// Library
+// import { ToastContainer } from "react-toastify"
+// import "react-toastify/dist/ReactToastify.css"
 
 function App() {
    const [ShowWelcome, setShowWelcome] = useState(true);
@@ -40,7 +34,8 @@ function App() {
    if (ShowWelcome) {
       return <Welcome />;
    }
-<<<<<<< HEAD
+
+   
 
    return (
       <>
@@ -52,8 +47,8 @@ function App() {
                 "/" shows the Home component
                 "/menu" shows the Menu component
             */}
-      
             <Routes>
+               {/* <ToastContainer position='top-center' autoClose={3000} theme='colored' /> */}
                <Route
                   path="/"
                   element={<Home />}
@@ -94,53 +89,6 @@ function App() {
                   path="/edit-profile"
                   element={<EditProfile />}
                />
-
-=======
-
-   return (
-      <>
-         <BrowserRouter basename="">
-            {/* <OfflineModal /> */}
-
-            <Navbar />
-            {/* Client-side routing:
-                "/" shows the Home component
-                "/menu" shows the Menu component
-            */}
-            <Routes>
-               <Route
-                  path="/"
-                  element={<Home />}
-               />
-               <Route
-                  path="/menu"
-                  element={<Menu />}
-               />
-               <Route
-                  path="/about"
-                  element={<About />}
-               />
-               <Route
-                  path="/contact"
-                  element={<Contact />}
-               />
-               <Route
-                  path="/offers"
-                  element={<Offers />}
-               />
-               <Route
-                  path="/search"
-                  element={<Search />}
-               />
-               <Route
-                  path="/signUp"
-                  element={<SignUp />}
-               />
-               <Route
-                  path="/Login"
-                  element={<Login />}
-               />
->>>>>>> b00121f9cc69d48919edc5d67d87d3ee729211ae
             </Routes>
             <Footer />
          </BrowserRouter>
