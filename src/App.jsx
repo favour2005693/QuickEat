@@ -40,7 +40,7 @@ function App() {
    return (
       <>
          <BrowserRouter basename="">
-            {/* <OfflineModal /> */}
+            <OfflineModal /> 
 
             <Navbar />
             {/* Client-side routing:
